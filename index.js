@@ -1,6 +1,9 @@
 const express = require('express');
 const dotenv = require('dotenv');
-session = require('express-session');
+const session = require('express-session');
+
+// setup
+require('./utils/db');
 
 
 dotenv.config();
@@ -9,7 +12,6 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const sessionData = {
   secret: process.env.SESSION_SECRET,
-  cookie: {}
 };
 
 app.use(session(sessionData));

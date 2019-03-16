@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Thor Ragnarok",
+        "releaseDate": "2017-11-03",
+        "category": [
+            "Action",
+            "Adventure",
+            "Comedy"
+        ],
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_SY1000_CR0,0,674,1000_AL_.jpg"
+    },
+    {
+        "name": "Wonder Woman",
+        "releaseDate": "2017-06-02",
+        "category": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+        ],
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDFmZjgyMTEtYTk5MC00NmY0LWJhZjktOWY2MzI5YjkzODNlXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SY1000_SX675_AL_.jpg"
+    },
+    {
+        "name": "Guardians of the Galaxy Vol. 2",
+        "releaseDate": "2017-05-05",
+        "category": [
+            "Action",
+            "Adventure",
+            "Comedy"
+        ],
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SY1000_CR0,0,674,1000_AL_.jpg"
+    },
+    {
+        "name": "Despicable Me 3",
+        "releaseDate": "2017-05-30",
+        "category": [
+            "Animation",
+            "Adventure",
+            "Comedy"
+        ],
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjUyNzQ2MTg3Ml5BMl5BanBnXkFtZTgwNzE4NDM3MTI@._V1_SY1000_CR0,0,631,1000_AL_.jpg"
+    },
+    {
+        "name": "Solo: A Star Wars Story",
+        "releaseDate": "2018-05-25",
+        "category": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+        ],
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTM2NTI3NTc3Nl5BMl5BanBnXkFtZTgwNzM1OTQyNTM@._V1_SY1000_CR0,0,674,1000_AL_.jpg"
+    }
+]
