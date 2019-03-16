@@ -1,0 +1,15 @@
+{
+  "name": "moviesApp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.4.19"
+  }
+}
