@@ -1,14 +1,21 @@
 const User = require('../models/User');
 
 
-exports.register = (req, res) => {
+exports.register = async  (req, res) => {
   if (req.method === 'GET') {
     return res.render('register');
+  }
+  const { fullname, email, password } = req.body;
+  try {
+    const user = await User.create({ fullname, email, password });
+    req.session.user = user;
+    return res.redirect('/movies');
+  } catch(err) {
+    return res.redirect('/register');
   }
 }
 
 exports.login = async (req, res) => {
-  console.log(req.session);
   if (req.method === 'GET') {
     return res.render('index', { errorMessage: '' });
   }
@@ -16,8 +23,8 @@ exports.login = async (req, res) => {
   try {
     const user = await User.authenticate(email, password);
   } catch (error) {
-    return res.redirect('/login', { errorMessage: 'email or password incorrect' });
+    return res.redirect('/login');
   }
   req.session.user = user;
-  console.log(email, password, req);
+  return res.redirect('/movies');
 }

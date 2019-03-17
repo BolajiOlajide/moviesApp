@@ -16,3 +16,7 @@ button {
     width: 10rem;
     height: 2rem;
 }
+
+.error {
+    color: red;
+}
