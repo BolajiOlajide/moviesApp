@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Movies App - Signin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <% include ./partials/head %>
+    <title>Movies App - Register</title>
 </head>
+
 <body class="container">
     <h1>Welcome to the movies app</h1>
     <div>
         <span>Have an account already? <a href='/login'>Login</a></span>
     </div>
+    <form action='/register' method='POST'>
+        <input type="text" placeholder="Your fullname" name="fullName" required />
+        <input type="email" placeholder="Your email address" name="email" required />
+        <input type="password" placeholder="Your password" name="password" required />
+        <button type="submit">Login</button>
+    </form>
 </body>
+
 </html>
