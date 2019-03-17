@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ./partials/head %>
+    <title>Movies App - Movie Detail</title>
+</head>
+
+<body class="container">
+        <% include ./partials/header %>
+    <% if (movie) { %>
+        <h1><%= movie.name %></h1>
+        <img src="<%= movie.posterUrl %>" />
+        <p class="movieField">Genre:</p>
+        <span>
+            <% movie.category.forEach(function(category) { %>
+                <%= category %>,
+            <% }); %>
+        </span>
+        <br />
+        <p><span class="movieField">Release Date:</span> <%= movie.releaseDate %></p>
+        <p class="movieField">Comments</p>
+        <% movie.comments.forEach(function(comment) { %>
+            <%= comment %>,
+        <% }); %>
+        <form action="/movie/<%= movie._id %>/comment" method="POST">
+            <textarea cols="30" rows="10" name="comment" required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+        <p class="movieField">Rating</p>
+        <% if (averageRating === 0) { %>
+            <p>Movie hasnt been rated by any user yet.</p>
+        <% } else { %>
+            <p><%= averageRating %>/5 by <%= movie.ratingsCount %> users</p>
+        <% } %>
+        <form action="/movie/<%= movie._id %>/rate" method="POST">
+            <input type="number" min=1 max=5 required />
+            <button type="submit">Rate</button>
+        </form>
+    <% } else { %>
+        <p class="error">Movie not found!</p>
+    <% } %>
+</body>
+
+</html>

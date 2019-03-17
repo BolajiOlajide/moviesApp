@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ./partials/head %>
+    <title>Movies App - Movie Detail</title>
+</head>
+
+<body class="container">
+    <% include ./partials/header %>
+    <form action="/profile" method="POST">
+        <input type="text" value="<%= profile.fullname %>" name="fullname" required />
+        <input type="email" value="<%= profile.email %>" name="email" required />
+        <button type="submit">Update Profile</button>
+    </form>
+    <h2>Favorites</h2>
+</body>
+</html>

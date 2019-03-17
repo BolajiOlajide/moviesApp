@@ -20,8 +20,9 @@ exports.login = async (req, res) => {
     return res.render('index', { errorMessage: '' });
   }
   const { email, password } = req.body;
+  let user;
   try {
-    const user = await User.authenticate(email, password);
+    user = await User.authenticate(email, password);
   } catch (error) {
     return res.redirect('/login');
   }

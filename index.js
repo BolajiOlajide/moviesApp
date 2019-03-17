@@ -17,8 +17,8 @@ const PORT = parseInt(process.env.PORT, 10) || 8080;
 const sessionData = {
   key: 'user_sid',
   secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: false
+  resave: true,
+  saveUninitialized: true
 };
 
 app.use(express.json());

@@ -20,3 +20,22 @@ button {
 .error {
     color: red;
 }
+
+.container {
+    margin: 0 10rem;
+}
+
+img {
+    width: 25rem;
+}
+
+.movieField {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.appNav {
+    text-decoration: none;
+    display: inline;
+    margin-right: 1rem;
+}

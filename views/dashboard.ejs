@@ -8,7 +8,11 @@
 
 <body class="container">
     <h1>Welcome to the movies app</h1>
-    Movies Loaded
+    <% include ./partials/header %>
+    <h3>Latest Movies</h3>
+    <% movies.forEach(function(movie) { %>
+        <p><a href="/movie/<%=movie._id%>"><%= movie.name %></a></p>
+    <% }); %>
 </body>
 
 </html>

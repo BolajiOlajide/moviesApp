@@ -39,3 +39,48 @@ exports.dashboard = async (req, res, next) => {
     next(err);
   }
 }
+
+exports.getSingleMovie = async (req, res, next) => {
+  try {
+    const { movieId } = req.params;
+    let averageRating = 0;
+
+    const movie = await Movie
+      .findById(movieId)
+      .populate('comments');
+
+    if (movie && movie.ratingsValue !== 0) {
+      averageRating = Math.round(movie.ratingsValue / movie.ratingsCount);
+    }
+
+    return res.render('movieDetail', { movie, averageRating });
+  } catch(err) {
+    next(err);
+  }
+}
+
+exports.commentMovie = async (req, res) => {
+  try {
+    const { movieId } = req.params;
+    const { user: { _id: userId} } = req.session;
+    console.log(req.session.user);
+    const { movieComment } = req.body;
+
+    const comment = await Comment.create({
+      movieId,
+      userId,
+      comment: movieComment,
+    });
+    const movie = await Movie.findById(movieId);
+    movie.comments.push(comment);
+    await movie.save();
+
+    return res.redirect(`/movie/${movieId}`);
+  } catch(err) {
+    next(err);
+  }
+}
+
+exports.movieCategories = async (req, res) => {
+  return res.render('categories');
+}
