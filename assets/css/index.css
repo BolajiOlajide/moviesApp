@@ -1,0 +1,18 @@
+form {
+    margin-top: 1rem;
+}
+
+input {
+    display: block;
+    width: auto;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+button {
+    background: blue;
+    color: white;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 2rem;
+}
